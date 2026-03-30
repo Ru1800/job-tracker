@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f5f0e8;
+  color: #3d3426;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border: 1px solid #c8b89a;
+  border-radius: 8px;
+  background: #fdf8f0;
+  color: #3d3426;
+  font-size: 14px;
+  font-family: 'Georgia', serif;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #8a9e7a;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  transition: all 0.2s;
+}
