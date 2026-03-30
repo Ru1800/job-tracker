@@ -94,7 +94,8 @@ function Dashboard({ onLogout }) {
     }
   };
 
-  useEffect(() => { getJobs(); }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => { getJobs(); }, []);
 
   const stats = {
     total: jobs.length,
