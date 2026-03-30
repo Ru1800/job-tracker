@@ -8,7 +8,7 @@ function Signup({ onSignup }) {
 
   const handleSignup = async () => {
     try {
-      await axios.post('http://127.0.0.1:5000/api/auth/signup', {
+      await axios.post('https://job-tracker-production-2250.up.railway.app/api/auth/signup', {
         email,
         password
       });

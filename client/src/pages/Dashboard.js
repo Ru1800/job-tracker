@@ -47,7 +47,7 @@ function Dashboard({ onLogout }) {
 
   const getJobs = async () => {
     try {
-      const res = await axios.get('http://127.0.0.1:5000/api/jobs', {
+      const res = await axios.get('https://job-tracker-production-2250.up.railway.app/api/jobs', {
         headers: { Authorization: token }
       });
       setJobs(res.data);
@@ -58,7 +58,7 @@ function Dashboard({ onLogout }) {
 
   const addJob = async () => {
     try {
-      await axios.post('http://127.0.0.1:5000/api/jobs', {
+      await axios.post('https://job-tracker-production-2250.up.railway.app/api/jobs', {
         ...form,
         salary: form.salary !== '' ? Number(form.salary) : undefined
       }, {
@@ -74,7 +74,7 @@ function Dashboard({ onLogout }) {
 
   const deleteJob = async (id) => {
     try {
-      await axios.delete(`http://127.0.0.1:5000/api/jobs/${id}`, {
+      await axios.delete(`https://job-tracker-production-2250.up.railway.app/api/jobs/${id}`, {
         headers: { Authorization: token }
       });
       getJobs();
@@ -85,7 +85,7 @@ function Dashboard({ onLogout }) {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://127.0.0.1:5000/api/jobs/${id}`, { status }, {
+      await axios.put(`https://job-tracker-production-2250.up.railway.app/api/jobs/${id}`, { status }, {
         headers: { Authorization: token }
       });
       getJobs();
